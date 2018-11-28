@@ -1,0 +1,20 @@
+{
+  "name": "NHL.com Hide Scores",
+  "version": "1.0",
+  "description": "Hides the scores on nhl.com",
+  "manifest_version": 2,
+  "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
+  "background": {
+    "scripts": ["jquery.min.js", "background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["*://*.nhl.com/*"],
+    "js": ["jquery.min.js", "contentscript.js"],
+    "css": ["contentscript.css"],
+    "run_at": "document_start"
+  }],
+  "page_action": {
+    "default_popup": "popup.html"
+  }
+}
