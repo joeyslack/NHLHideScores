@@ -1,7 +1,3 @@
-// chrome.webNavigation.onDOMContentLoaded.addListener(function() {
-// 	console.log("WE IN IT");
-// });
-
 chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({hide: true});
 
