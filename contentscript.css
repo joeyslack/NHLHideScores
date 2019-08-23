@@ -1,3 +1,6 @@
-.g5-component--nhl-scores__team-score {
+.g5-component--nhl-scores__team-score,
+.g5-component--nhl-scores__status-series,
+.view-container.team-matchup-container,
+.view-container.playoff-schedule-container {
 	visibility: hidden;
 }

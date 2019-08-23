@@ -1,13 +1,9 @@
 {
   "name": "NHL.com Hide Scores",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Hides the scores on NHL.com, past and present.",
   "manifest_version": 2,
   "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
-  "background": {
-    "scripts": ["jquery.min.js", "background.js"],
-    "persistent": false
-  },
   "content_scripts": [{
     "matches": ["*://*.nhl.com/*"],
     "js": ["jquery.min.js", "contentscript.js"],
