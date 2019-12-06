@@ -1,6 +1,17 @@
 .g5-component--nhl-scores__team-score,
 .g5-component--nhl-scores__status-series,
+.g5-component--nhl-scores__status-state-label,
 .view-container.team-matchup-container,
-.view-container.playoff-schedule-container {
+.view-container.playoff-schedule-container,
+.milestones {
 	visibility: hidden;
+}
+
+body.showScores .g5-component--nhl-scores__team-score,
+body.showScores .g5-component--nhl-scores__status-series,
+body.showScores .g5-component--nhl-scores__status-state-label,
+body.showScores .view-container.team-matchup-container,
+body.showScores .view-container.playoff-schedule-container,
+body.showNews .milestones {
+	visibility: visible;
 }
