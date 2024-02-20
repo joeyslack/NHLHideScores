@@ -1,0 +1,9 @@
+body:not([class*="showScores"]) li.alice-carousel__stage-item .gjtsvS,
+body:not([class*="showScores"]) li.alice-carousel__stage-item .dxBtNw,
+body:not([class*="showScores"]) li.alice-carousel__stage-item .bxBJer {
+  visibility: hidden;
+}
+
+body:not([class*="showScores"]) section.d3-l-grid--outer.d3-l-section-row:first-child {
+  display: none;
+}
