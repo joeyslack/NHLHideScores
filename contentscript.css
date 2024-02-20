@@ -15,3 +15,24 @@ body.showScores .view-container.playoff-schedule-container,
 body.showNews .milestones {
 	visibility: visible;
 }
+
+.g5-component--nhl-scores__team--loser {
+	color: inherit !important;
+	font-weight: 700;
+}
+
+.g5-component--nhl-scores__team--winner {
+	font-weight: 700;
+}
+
+.scores__content .nhl-scores__wrapper {
+	visibility: hidden;
+}
+
+.g5-component--nhl-scores__panel.g5-component--nhl-scores__panel--secondary .g5-component--nhl-scores__info {
+	visibility: hidden;
+}
+
+body.showScores .g5-component--nhl-scores__panel.g5-component--nhl-scores__panel--secondary .g5-component--nhl-scores__info {
+	visibility: visible;
+}
