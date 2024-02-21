@@ -1,2 +1,4 @@
 *.zip
-nhlhidescores*.zip
+**/*.zip
+
+*.sketch
