@@ -1,9 +1,15 @@
-body:not([class*="showScores"]) li.alice-carousel__stage-item .gjtsvS,
-body:not([class*="showScores"]) li.alice-carousel__stage-item .dxBtNw,
-body:not([class*="showScores"]) li.alice-carousel__stage-item .bxBJer {
+
+body:not([class*="showScores"]) li.alice-carousel__stage-item > div:first-child > div:nth-child(2) > span,
+body:not([class*="showScores"]) li.alice-carousel__stage-item > div:first-child > div:nth-child(6),
+body:not([class*="showScores"]) li.alice-carousel__stage-item > div:first-child > div:nth-child(8) {
   visibility: hidden;
 }
 
-body:not([class*="showScores"]) section.d3-l-grid--outer.d3-l-section-row:first-child {
+body:not([class*="showScores"]) div.nhl-l-section-bg__container.nhl-container > section:nth-child(1),
+body:not([class*="showScores"]) div.nhl-l-section-bg__container.nhl-container > section:nth-child(2) {
+  display: none;
+}
+
+main#main-content section div.nhl-l-section-bg__adv {
   display: none;
 }

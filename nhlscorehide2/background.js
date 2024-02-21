@@ -1,8 +1,6 @@
 const extensions = 'https://www.nhl.com'
 const webstore = 'http://www.nhl.com'
 
-let syncHide = chrome.storage.sync.get(["hide"])["hide"] || "ON"
-
 chrome.action.onClicked.addListener(async (tab) => {
   // await hideScores(tab.url, tab.id)
   if (tab.url.startsWith(extensions) || tab.url.startsWith(webstore)) {
@@ -17,25 +15,12 @@ chrome.action.onClicked.addListener(async (tab) => {
       text: nextState,
     });
 
-    if (nextState === "ON") {
-      // Insert the CSS file when the user turns the extension on
-      await chrome.scripting.insertCSS({
-        files: ["contentscript.css"],
-        target: { tabId: tab.id },
-      });
-      await chrome.storage.sync.set({hide: nextState})
-      //syncHide = nextState
-      await chrome.tabs.sendMessage(tab.id, {hide: nextState})
-    } else if (nextState === "OFF") {
-      // Remove the CSS file when the user turns the extension off
-      await chrome.scripting.removeCSS({
-        files: ["contentscript.css"],
-        target: { tabId: tab.id },
-      });
-      await chrome.storage.sync.set({hide: nextState})
-      //syncHide = nextState
-      // document.body.classList.add("showScores")
-      await chrome.tabs.sendMessage(tab.id, {hide: nextState})
-    }
+    // Insert the CSS file when the user turns the extension on
+    await chrome.scripting.insertCSS({
+      files: ["contentscript.css"],
+      target: { tabId: tab.id },
+    });
+    await chrome.storage.sync.set({hide: nextState})
+    await chrome.tabs.sendMessage(tab.id, {hide: nextState})
   }
 });

@@ -1,6 +1,6 @@
 {
   "name": "NHL.com Hide Scores",
-  "version": "2",
+  "version": "2.1",
   "description": "Hides the scores on NHL.com, past and present.",
   "manifest_version": 3,
   "permissions": ["tabs", "storage", "scripting"],
